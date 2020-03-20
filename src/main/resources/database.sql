@@ -12,3 +12,7 @@ CREATE TABLE Usuario (
   password VARCHAR(5000) NOT NULL,
   usuario VARCHAR(5000) NOT NULL
 );
+
+insert into mysql.blog values (1,'prueba','prueba');
+insert into mysql.usuario values (1,'activo','prueba','prueba');
+insert into mysql.usuario values (2,'inactivo','prueba','prueba');
