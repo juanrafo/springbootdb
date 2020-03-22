@@ -7,8 +7,10 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+/*@Configuration
 @EnableAutoConfiguration
+@ComponentScan({ "com.springbootdb.springbootdb", "controller" })*/
+@Configuration
 @ComponentScan({ "com.springbootdb.springbootdb", "controller" })
 @SpringBootApplication(exclude = {SecurityAutoConfiguration.class })
 public class SpringbootdbApplication {
