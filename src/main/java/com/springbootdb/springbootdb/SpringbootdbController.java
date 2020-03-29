@@ -44,7 +44,7 @@ public class SpringbootdbController {
         String content = body.get("content");
         return blogRespository.save(new Blog(title, content));
     }
-    @CrossOrigin(origins = "http://localhost:4200")
+
     @GetMapping(path = "/login",consumes = "application/json", produces = "application/json")
     public List<Usuario> login(@RequestBody Map<String, String> body) {
         String nombreUsuario = body.get("nombreUsuario");
@@ -52,5 +52,9 @@ public class SpringbootdbController {
 
         return usuarioRepository.loguear(nombreUsuario,password);
     }
-
+    @CrossOrigin(origins = "http://localhost:4200")
+    @GetMapping(path = "/login2",consumes = "application/json", produces = "application/json")
+    public List<Usuario> login2(@RequestParam("nombreUsuario") String nombreUsuario,@RequestParam("password") String password) {
+          return usuarioRepository.loguear(nombreUsuario,password);
+    }
 }
