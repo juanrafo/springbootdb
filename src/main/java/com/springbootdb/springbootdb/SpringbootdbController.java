@@ -20,6 +20,8 @@ public class SpringbootdbController {
     BlogRespository blogRespository;
     @Autowired
     UsuarioRepository usuarioRepository;
+    @Autowired
+    BookRepository bookRepository;
 
      @GetMapping("/blog")
     public List<Blog> index(){
@@ -56,5 +58,11 @@ public class SpringbootdbController {
     @GetMapping(path = "/login2",consumes = "application/json", produces = "application/json")
     public List<Usuario> login2(@RequestParam("nombreUsuario") String nombreUsuario,@RequestParam("password") String password) {
           return usuarioRepository.loguear(nombreUsuario,password);
+    }
+
+    @CrossOrigin(origins = "http://localhost:4200")
+    @GetMapping(path = "/books",consumes = "application/json", produces = "application/json")
+    public List<Book> getBooks(){
+         return bookRepository.findAll();
     }
 }
