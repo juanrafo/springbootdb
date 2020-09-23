@@ -1,9 +1,8 @@
 package com.springbootdb.springbootdb;
-
 import javax.persistence.*;
 
 @Entity
-@Table(name="usuario")
+@Table(name="Usuario")
 public class Usuario {
 
     @Id
