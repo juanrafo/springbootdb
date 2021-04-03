@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "http://localhost:8080/index/",
+			"name": "[LOCAL] Login",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -30,15 +30,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://192.168.99.100:8080/login",
+					"raw": "http://localhost:8090/login",
 					"protocol": "http",
 					"host": [
-						"192",
-						"168",
-						"99",
-						"100"
+						"localhost"
 					],
-					"port": "8080",
+					"port": "8090",
 					"path": [
 						"login"
 					]
@@ -47,7 +44,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/blog",
+			"name": "[LOCAL] Blog",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -71,12 +68,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/blog",
+					"raw": "http://localhost:8090/blog",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8090",
 					"path": [
 						"blog"
 					]
@@ -85,60 +82,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/login",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"nombreUsuario\": \"prueba\",\n    \"password\": \"prueba\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8080/login",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"login"
-					],
-					"query": [
-						{
-							"key": "title",
-							"value": "prueba",
-							"disabled": true
-						},
-						{
-							"key": "content",
-							"value": "prueba",
-							"disabled": true
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "http://192.168.99.100:8080/login2?nombreUsuario=prueba&password=prueba",
+			"name": "[Docker] Login v2 Params",
 			"request": {
 				"auth": {
 					"type": "noauth"
@@ -153,7 +97,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://192.168.99.100:8080/login2?nombreUsuario=prueba&password=prueba",
+					"raw": "http://192.168.99.100:8090/login2?nombreUsuario=prueba&password=prueba",
 					"protocol": "http",
 					"host": [
 						"192",
@@ -161,7 +105,7 @@
 						"99",
 						"100"
 					],
-					"port": "8080",
+					"port": "8090",
 					"path": [
 						"login2"
 					],
