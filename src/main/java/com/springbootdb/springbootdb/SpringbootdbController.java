@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+
 @RestController
 @ApiModel("Controller")
 public class SpringbootdbController {
@@ -114,7 +115,7 @@ public class SpringbootdbController {
 
          String Url = "http://192.168.99.100:8080/api/v1/mantenimiento/distritos";
         Object[] objects = restTemplate.getForObject(Url,Object[].class);
-        List<Object> lista =Arrays.asList(objects);
+        List<Object> lista = Arrays.asList(objects);
         Observable.just(lista).subscribe(System.out::println);
         //return Arrays.asList(objects);
 

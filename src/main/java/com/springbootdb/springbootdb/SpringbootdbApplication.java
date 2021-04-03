@@ -1,5 +1,6 @@
 package com.springbootdb.springbootdb;
 
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
@@ -12,13 +13,12 @@ import org.springframework.web.client.RestTemplate;
 @EnableAutoConfiguration
 @ComponentScan({ "com.springbootdb.springbootdb", "controller" })*/
 @Configuration
-@ComponentScan({ "com.springbootdb.springbootdb", "controller" })
+@ComponentScan({ "com.springbootdb.springbootdb", "controller"})
 @SpringBootApplication(exclude = {SecurityAutoConfiguration.class })
 public class SpringbootdbApplication {
 
-
 	public static void main(String[] args) {
-		SpringApplication.run(SpringbootdbApplication.class, args);
+		SpringApplication.run(SpringbootdbApplication.class,args);
 	}
 
 	@Bean
